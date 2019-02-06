@@ -1,0 +1,52 @@
+label 
+    display: inline-block
+    cursor: pointer
+    position: relative
+    padding-left: 45px
+    font-size: 13px
+    top: 10px
+.switcher
+    input[type="checkbox"] 
+        display: none
+
+    input[type="checkbox"]:checked + label > .switcher__inner:before
+        content: "\2022"
+        color: grey
+        font-size: 66px
+        text-align: center
+        line-height: 28px
+        position: absolute
+        z-index: 1
+        left: 10px
+        transition-delay: 0.2s linear
+       
+    &__inner:before
+        content: "\2022"
+        color: grey
+        font-size: 66px
+        text-align: center
+        line-height: 28px
+        position: absolute
+        z-index: 1
+        left: 30px
+        transition: 0.2s linear
+
+    
+
+
+.switcher__inner
+    content: ""
+    display: inline-block
+    width: 56px
+    height: 30px
+    margin-right: 10px
+    position: absolute
+    left: 0
+    top: 10px
+    background-color: #aaa
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    border-radius: 10px
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) inset, 0 0 4px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 1px rgba(0, 0, 0, 0.3) inset
+   
+input[type="checkbox"]:checked + label > .switcher__inner
+    background-color: green
